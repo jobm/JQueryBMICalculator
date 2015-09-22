@@ -1,7 +1,10 @@
 $(function(){
   $('#calculate').click(function(e){
     e.preventDefault();
-    //alert('');
+    if(!$("input[type='text']" ).hasClass('class-error')){
+      alert('valid');
+    }
+    
     $('.results').animate({
       opacity:0
     },1000);
@@ -24,6 +27,8 @@ $(function(){
         $(this).removeClass('class-error');
       }
       else{$(this).addClass('class-error');}
+
+
     });
   });
 });

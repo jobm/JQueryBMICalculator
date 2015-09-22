@@ -10,3 +10,7 @@ body{
 .class-error{
   border: 2px solid red;
 }
+
+#reset,#calculate{
+  width: 100%;
+}
