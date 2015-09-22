@@ -1,6 +1,7 @@
 $(function(){
-  $(calculate).click(function(e){
+  $('#calculate').click(function(e){
     e.preventDefault();
+    //alert('');
     $('.results').animate({
       opacity:0
     },1000);
@@ -19,33 +20,10 @@ $(function(){
     });
 
     $("input[type='text']" ).change(function() {
-      //$(this).removeClass('class-error');
       if($(this).val() !== ""){
         $(this).removeClass('class-error');
       }
       else{$(this).addClass('class-error');}
-      //else{$(this).removeClass('class-error');}
     });
-
-
-
-      // if($('#feet').text() === ""){
-      //   $('#feet').addClass('class-error');
-      // }
-      // else if($('#inches').text() === ""){
-      //   $('#inches').addClass('class-error');
-      // }
-      // else if($('#pound').text() === ""){
-      //   $('#pound').addClass('class-error');
-      // }
-      // else if($('#kgs').text() === ""){
-      //   $('#kgs').addClass('class-error');
-      // }
-      // else{
-      //     $('#feet').removeClass('class-error');
-      //     $('#inches').removeClass('class-error');
-      //     $('#pound').removeClass('class-error');
-      //     $('#kgs').removeClass('class-error');
-      // }
-    });
+  });
 });
