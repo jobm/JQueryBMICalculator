@@ -40,6 +40,14 @@ $(function(){
         var toBmi= devidebySquareHeight * 703;
         var bmi = toBmi.toFixed(2);
         $('#bmi_results').text(bmi);
+        if(bmi < 18.5){$('bmi_class').text("Underweight");}
+        else if(bmi <= 24.9 && bmi >= 18.5){$('#bmi_class').text("normal weight");}
+        else if(bmi <= 29.9 && bmi >= 25.0){$('#bmi_class').text("overweight");}
+        else if(bmi <= 34.9 && bmi >= 30.0){$('#bmi_class').text("class I obesity");}
+        else if(bmi <= 39.9 && bmi >= 35.0){$('#bmi_class').text("class II obesity");}
+        else if(bmi >= 40){$('#bmi_class').text("class III obesity");}
+
+
       }
     }
 
